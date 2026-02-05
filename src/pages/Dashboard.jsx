@@ -25,7 +25,6 @@ function Dashboard() {
 
       <p>
         Welcome! <strong>{user?.name}</strong>
-        <span className="email">({user?.email})</span>
       </p>
     </div>
 
