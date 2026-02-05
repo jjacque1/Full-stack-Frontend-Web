@@ -15,7 +15,9 @@ Jackson Jacque
 
 ## Live Link
 
-- Frontend: Add later
+- Frontend:https://full-stack-frontend-web.onrender.com/ 
+- Backend: https://full-stack-backend-api-gcju.onrender.com 
+
 
 ---
 
