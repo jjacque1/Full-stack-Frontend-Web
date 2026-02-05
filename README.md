@@ -135,13 +135,12 @@ The UI is fully responsive and optimized for:
 
 - Dark mode
 
-- Drag-and-drop tasks
+- Update task and projects 
 
 - Task due dates
 
 - User profile settings
 
-- Analytics dashboard
 
 ## Planning & Execution
 
