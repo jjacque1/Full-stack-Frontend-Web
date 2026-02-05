@@ -1,0 +1,25 @@
+.app {
+  min-height: 100vh;       
+  display: flex;
+  flex-direction: column;  
+  font-family: sans-serif;
+}
+
+/* main content area */
+.app-main {
+  flex: 1;                 
+  padding: 16px 160px;
+}
+
+/* Responsive padding */
+@media (max-width: 1024px) {
+  .app-main {
+    padding: 16px 48px;
+  }
+}
+
+@media (max-width: 640px) {
+  .app-main {
+    padding: 16px;
+  }
+}

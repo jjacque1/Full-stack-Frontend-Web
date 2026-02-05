@@ -1,0 +1,107 @@
+/* Navbar container */
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 12px 16px;
+  background: #ddd;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+/* Brand */
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: #111827;
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.brand-text {
+  font-weight: 800;
+  font-size: 16px;
+}
+
+/* Nav links row */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 12px; /* keeps everything side by side */
+}
+
+/* Links */
+.nav-link {
+  text-decoration: none;
+  color: #111827;
+  font-weight: 700;
+  font-size: 14px;
+  padding: 8px 10px;
+  border-radius: 8px;
+}
+
+.nav-link:hover {
+  background: #f3f4f6;
+}
+
+/* Primary action (Sign up) */
+.nav-link--primary {
+  background: #2563eb;
+  color: white;
+}
+
+.nav-link--primary:hover {
+  background: #1d4ed8;
+}
+
+/* Logout button */
+.nav-btn {
+  border: 1px solid #d1d5db;
+  background: #ffffff;
+  color: #111827;
+
+  padding: 8px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.nav-btn:hover {
+  background: #f3f4f6;
+}
+
+/* Tablet+ spacing */
+@media (min-width: 768px) {
+  .nav {
+    padding: 14px 24px;
+  }
+
+  .brand-text {
+    font-size: 18px;
+  }
+
+  .logo {
+    width: 48px;
+    height: 48px;
+  }
+}
+
+/* -----------------------------
+   Mobile: hide brand text
+------------------------------ */
+@media (max-width: 640px) {
+  .brand-text {
+    display: none;
+  }
+}

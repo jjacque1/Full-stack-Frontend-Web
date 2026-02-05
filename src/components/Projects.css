@@ -1,0 +1,291 @@
+/* -----------------------------
+   Mobile-first Projects styles
+------------------------------ */
+
+section {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+/* Typography */
+h1,
+h2,
+h3 {
+  margin: 0 0 10px;
+  text-align: left;
+}
+
+p {
+  margin: 8px 0;
+  text-align: left;
+}
+
+/* -----------------------------
+   Forms
+------------------------------ */
+
+form {
+  display: flex;
+  flex-direction: column; /* mobile: stack */
+  gap: 10px;
+  margin: 12px 0 18px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  background: #fff;
+  outline: none;
+}
+
+button {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  background: #2563eb;
+  color: white;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+button:disabled {
+  background-color: #9ca3af;
+  border-color: #9ca3af;
+  cursor: not-allowed;
+}
+
+/* -----------------------------
+   Project list
+------------------------------ */
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+li {
+  width: 100%;
+}
+
+/* Project row: mobile wraps nicely */
+.project-row {
+  display: flex;
+  flex-direction: column; /* mobile: stack buttons */
+  gap: 10px;
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  background: #fff;
+}
+
+.project-select {
+  width: 100%;
+  background: #f3f4f6;
+  color: #111827;
+  border: 1px solid #d1d5db;
+  text-align: left;
+}
+
+.project-view {
+  width: 100%;
+  background: #ffffff;
+  color: #111827;
+  border: 1px solid #d1d5db;
+}
+
+.project-select:hover,
+.project-view:hover {
+  background: #e5e7eb;
+}
+
+.tasks-Ondashboardh3 {
+  padding-top: 68px;
+}
+
+/* -----------------------------
+   Selected project details card
+------------------------------ */
+
+.project-details {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 14px;
+  padding: 14px;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  background: #fff;
+}
+
+.project-edit-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 10px 0 16px;
+}
+
+.project-edit-actions {
+  display: flex;
+  flex-direction: column; /* mobile: stack Save/Delete */
+  gap: 10px;
+  width: 100%;
+}
+
+.danger {
+  background: #dc2626;
+  border-color: #dc2626;
+}
+
+/* -----------------------------
+   Tasks
+------------------------------ */
+
+.task-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.task-item {
+  display: flex;
+  flex-direction: column; /* mobile: stack title + status */
+  gap: 8px;
+  padding: 12px;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  background: #f8f9fa;
+}
+
+.task-title {
+  font-weight: 700;
+  color: #111827;
+  word-break: break-word;
+}
+
+.task-status {
+  width: fit-content;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 800;
+  text-transform: lowercase;
+  border: 1px solid #e5e7eb;
+  background: #fff;
+}
+
+/* status colors */
+.task-status.done {
+  background: #d4edda;
+  border-color: #c3e6cb;
+}
+
+.task-status.in-progress {
+  background: #fff3cd;
+  border-color: #ffeeba;
+}
+
+.task-status.to-do {
+  background: #e2e3e5;
+  border-color: #d6d8db;
+}
+
+/* -----------------------------
+   Tablet+ styles
+------------------------------ */
+
+@media (min-width: 640px) {
+  .projects-panel {
+    padding: 20px;
+  }
+
+  /* Create project form: input + button side-by-side */
+  form {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  form input[type="text"] {
+    flex: 1;
+  }
+
+  form button {
+    width: auto;
+    min-width: 140px;
+  }
+
+  /* Project row: buttons side-by-side and equal size */
+  .project-row {
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .project-select,
+  .project-view {
+    flex: 1; /*equal width */
+  }
+
+  /* Edit actions: Save/Delete side-by-side */
+  .project-edit-actions {
+    flex-direction: row;
+  }
+
+  .project-edit-actions button {
+    width: auto;
+  }
+
+  /* Task row: title + status side-by-side */
+  .task-item {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+ 
+}
+
+/* -----------------------------
+   Extra responsive tweaks
+------------------------------ */
+
+/* Very small phones */
+@media (max-width: 380px) {
+  section {
+    padding: 12px;
+  }
+
+  button {
+    padding: 12px; /* easier tap */
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="password"] {
+    padding: 12px;
+  }
+
+   .tasks-Ondashboardh3 {
+    padding-top: 0;
+  }
+}
+
+/* Tablet and up: make project buttons same size */
+@media (min-width: 640px) {
+  .project-select,
+  .project-view {
+    flex: 1; /* equal width */
+  }
+}

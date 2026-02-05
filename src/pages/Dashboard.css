@@ -1,0 +1,64 @@
+/* -----------------------------
+   Dashboard layout (mobile-first)
+------------------------------ */
+
+.dashboard {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 16px; /* mobile-friendly */
+}
+
+/* Header card */
+.dashboard-header {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  padding: 14px;
+  margin-bottom: 20px;
+}
+
+/* Title */
+.dashboard-header h2 {
+  margin: 0 0 6px;
+  font-size: 20px;
+}
+
+/* User info */
+.dashboard-header p {
+  margin: 0;
+  color: #374151;
+  font-size: 14px;
+}
+
+.dashboard-header strong {
+  color: #111827;
+  font-weight: 700;
+}
+
+.dashboard-header .email {
+  margin-left: 4px;
+  color: #6b7280;
+  font-size: 13px;
+}
+
+/* -----------------------------
+   Tablet+
+------------------------------ */
+@media (min-width: 768px) {
+  .dashboard {
+    padding: 24px;
+  }
+
+  .dashboard-header {
+    padding: 18px 20px;
+  }
+
+  .dashboard-header h2 {
+    font-size: 24px;
+  }
+
+  .dashboard-header p {
+    font-size: 15px;
+  }
+}

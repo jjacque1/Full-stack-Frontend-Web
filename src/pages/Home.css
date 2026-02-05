@@ -1,0 +1,226 @@
+/* -----------------------------
+   Home (keep layout, make responsive)
+------------------------------ */
+
+.hero-page-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* IMPORTANT: Renamed to .home-container to avoid conflict with App.css */
+.home-container {
+  padding-top: 80px;
+  min-height: 100vh; /*  better than height: 100vh for mobile browsers */
+  width: 100%;
+  max-width: 1100px;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.hero-wrapper {
+  width: 50%;
+}
+
+.hero {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.hero-and-discriptions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+}
+
+/* Headline */
+.hero-page-wrapper h1 {
+  font-size: 60px;
+  padding: 0 0 48px 0;
+  margin: 0;
+  line-height: 1.05;
+}
+
+.colorHighlight {
+  color: #999999;
+}
+
+/* Left column */
+.h3s {
+  width: 50%;
+  padding: 0px 48px;
+}
+
+/* Features */
+.hero-page-wrapper h3 {
+  font-size: 36px;
+  margin: 0;
+  padding-bottom: 36px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* Bottom text */
+.para-bottom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.para {
+  padding-top: 80px;
+  font-weight: bold;
+  font-size: 36px;
+  margin: 0;
+}
+
+.para2 {
+  padding-top: 24px;
+  font-size: 24px;
+  margin: 0;
+  text-align: center;
+}
+
+.color {
+  color: #685d5d;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+/* -----------------------------
+   Tablet (<= 1024px)
+   Keep 2 columns, reduce sizes
+------------------------------ */
+@media (max-width: 1024px) {
+  .hero-page-wrapper .home-container {
+    padding-top: 64px;
+  }
+
+  .hero-page-wrapper h1 {
+    font-size: 48px;
+    padding-bottom: 36px;
+  }
+
+  .hero-page-wrapper h3 {
+    font-size: 28px;
+    padding-bottom: 24px;
+  }
+
+  .h3s {
+    padding: 0 24px;
+  }
+
+  .para {
+    font-size: 28px;
+    padding-top: 56px;
+  }
+
+  .para2 {
+    font-size: 20px;
+  }
+
+  .color {
+    font-size: 20px;
+  }
+}
+
+/* -----------------------------
+   Large phones / small tablets (<= 768px)
+   Stack columns if needed
+------------------------------ */
+@media (max-width: 768px) {
+  .hero-and-discriptions {
+    flex-direction: column; /* stack */
+    align-items: stretch;
+  }
+
+  .h3s,
+  .hero-wrapper {
+    width: 100%;
+  }
+
+  .h3s {
+    padding: 0;
+  }
+
+  .hero-page-wrapper h1 {
+    font-size: 40px;
+    padding-bottom: 24px;
+  }
+
+  .hero-page-wrapper h3 {
+    font-size: 24px;
+    padding-bottom: 18px;
+  }
+
+  .para {
+    font-size: 24px;
+    padding-top: 44px;
+    text-align: center;
+  }
+
+  .para2 {
+    font-size: 18px;
+  }
+
+  .color {
+    font-size: 18px;
+  }
+}
+
+/* -----------------------------
+   Small phones (<= 480px)
+   Tight spacing + readable sizes
+------------------------------ */
+@media (max-width: 480px) {
+  .hero-page-wrapper .home-container {
+    padding-top: 48px;
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+
+  .hero-page-wrapper h1 {
+    font-size: 32px;
+    line-height: 1.1;
+  }
+
+  .hero-page-wrapper h3 {
+    font-size: 20px;
+    padding-bottom: 14px;
+  }
+
+  .para {
+    font-size: 20px;
+    padding-top: 36px;
+  }
+
+  .para2 {
+    font-size: 16px;
+  }
+
+  .color {
+    font-size: 16px;
+  }
+}
+
+/* -----------------------------
+   Tiny phones (<= 360px)
+------------------------------ */
+@media (max-width: 360px) {
+  .hero-page-wrapper h1 {
+    font-size: 28px;
+  }
+
+  .hero-page-wrapper h3 {
+    font-size: 18px;
+  }
+
+  .para {
+    font-size: 18px;
+  }
+}
