@@ -24,7 +24,7 @@ function Dashboard() {
       <h2>Dashboard</h2>
 
       <p>
-        Logged in as <strong>{user?.name}</strong>
+        Welcome! <strong>{user?.name}</strong>
         <span className="email">({user?.email})</span>
       </p>
     </div>
